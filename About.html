@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About LearnHub - Online Learning Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(135deg, #3a0ca3 0%, #4361ee 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .project-overview {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .overview-text h2 {
+            color: #3a0ca3;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .overview-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .project-features {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 5px solid #4361ee;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #4361ee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .feature-card h3 {
+            color: #3a0ca3;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .project-benefits {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .benefit-item i {
+            font-size: 3rem;
+            color: #4361ee;
+            margin-bottom: 25px;
+        }
+
+        .benefit-item h3 {
+            color: #3a0ca3;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .benefit-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tech-item {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-item:hover {
+            background: #4361ee;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .tech-item:hover i,
+        .tech-item:hover h4 {
+            color: white;
+        }
+
+        .tech-item i {
+            font-size: 3rem;
+            color: #4361ee;
+            margin-bottom: 15px;
+        }
+
+        .tech-item h4 {
+            color: #3a0ca3;
+            font-size: 1.1rem;
+        }
+
+        .project-stats {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #3a0ca3 0%, #4361ee 100%);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #4cc9f0;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .overview-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>LearnHub</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Page Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <h1>About LearnHub</h1>
+                <p>Your Gateway to Quality Online Education - Anytime, Anywhere</p>
+            </div>
+        </section>
+
+        <!-- Project Overview Section -->
+        <section class="project-overview">
+            <div class="container">
+                <div class="overview-content">
+                    <div class="overview-text">
+                        <h2>What is LearnHub?</h2>
+                        <p><strong>LearnHub is a comprehensive online learning platform</strong> designed to provide accessible, high-quality education to students worldwide. Our platform bridges the gap between traditional education and modern digital learning needs.</p>
+                        
+                        <p>As an <strong>innovative educational technology project</strong>, LearnHub offers a wide range of courses across various disciplines, from technology and business to creative arts and personal development.</p>
+                        
+                        <p>Our mission is simple: <strong>make quality education available to everyone</strong>, regardless of their location, background, or financial situation. We believe that learning should be flexible, engaging, and tailored to individual needs.</p>
+                        
+                        <p>Built with cutting-edge technology and user-friendly design, LearnHub provides an immersive learning experience that combines video lessons, interactive exercises, and community support.</p>
+                    </div>
+                    <div class="overview-visual">
+                        <div style="height: 400px; background: linear-gradient(135deg, #4361ee, #4cc9f0); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                            <div style="text-align: center;">
+                                <i class="fas fa-laptop-code" style="font-size: 5rem; margin-bottom: 20px;"></i>
+                                <p>Modern Online Learning</p>
+                                <p style="font-size: 1rem; margin-top: 10px;">Accessible • Engaging • Effective</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="project-features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Key Features of LearnHub</h2>
+                    <p>Designed to enhance your learning experience</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Video

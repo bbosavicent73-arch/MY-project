@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <img src="Images/IMG_3777.JPG" alt="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - Online Learning Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>LearnHub</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="Home.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h2>Learn Without Limits</h2>
+                <p>Start, switch, or advance your career with thousands of courses, certificates, and degrees from world-class universities and companies.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn">Join For Free</a>
+                    <a href="#" class="btn btn-outline">Explore Courses</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Area of Focus Section -->
+        <section class="focus-section">
+            <div class="container">
+                <h1>AREA OF FOCUS</h1>
+                <p>Education and Technology</p>
+            </div>
+        </section>
+
+        <!-- Project Information Section -->
+        <section>
+            <div class="container">
+                <div class="project-info">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>MY MOTIVATION FOR THE PROJECT</h3>
+                            <ul>
+                                <li>Personal passion for education</li>
+                                <li>Identified problem in access to quality education</li>
+                                <li>Skill development for digital age</li>
+                                <li>Bridging the education gap</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h3>BENEFICIARIES OF THE PROJECT</h3>
+                            <ul>
+                                <li>University students</li>
+                                <li>Self learners</li>
+                                <li>Educators and teachers</li>
+                                <li>Working professionals</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h3>POTENTIAL IMPACT ON SOCIETY</h3>
+                            <ul>
+                                <li>Education Access for all</li>
+                                <li>Skill development at scale</li>
+                                <li>Career preparation and advancement</li>
+                                <li>Lifelong learning opportunities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section style="background-color: #f0f4ff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose LearnHub?</h2>
+                    <p>We provide the best learning experience with industry experts and cutting-edge technology.</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Learn Anytime, Anywhere</h3>
+                        <p>Access courses on your schedule from any device. Learn at your own pace with lifetime access to course materials.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3>Expert Instructors</h3>
+                        <p>Learn from industry professionals and academic experts with real-world experience in their fields.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Earn Certificates</h3>
+                        <p>Get recognized for your work with shareable certificates that you can add to your resume or LinkedIn profile.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>LearnHub</h3>
+                    <p>Empowering learners worldwide with accessible, high-quality education.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Popular Categories</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Data Science</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 LearnHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
